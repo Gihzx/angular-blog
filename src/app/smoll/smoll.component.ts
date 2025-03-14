@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-smoll',
@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './smoll.component.html',
   styleUrl: './smoll.component.css'
 })
-export class SmollComponent {
+export class SmollComponent implements OnInit{
+  @Input()
+  photCover:string= ""
+  @Input()
+  cardTitle:string = ""
+
+  constructor(){
+
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }
